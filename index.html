@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZilvyVT - Redes y Enlaces</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div id="age-gate-modal" class="modal">
+        <div class="modal-content">
+            <h2 class="modal-title">Advertencia de Contenido</h2>
+            <p>Este contenido puede incluir temas maduros. Confirma que eres mayor de 18 años para acceder a todos los enlaces y contenido.</p>
+            <button class="modal-button accept-button" onclick="verifyAge(true)">
+                <i class="fas fa-check-circle"></i> Sí, soy mayor de 18
+            </button>
+            <button class="modal-button decline-button" onclick="verifyAge(false)">
+                <i class="fas fa-times-circle"></i> No / Contenido General
+            </button>
+        </div>
+    </div>
+
+    <div class="container" id="main-content" style="display: none;">
+        <header class="profile-header">
+            <img src="images/imagen-vtuber.jpg"  alt="Imagen de Perfil Regular de ZilvyVT"  class="profile-pic" id="profile-pic">
+
+            <h1 class="vtuber-name">ZilvyVT</h1>
+
+            <p class="vtuber-bio">lvl 22 ✨Streamer Variedad ENG/ESP 💚💜 Zilverk Fem Version Alter Ego</p>
+        </header>
+
+        <div class="links">
+            <a href="https://fansly.com/ZilvyVT" target="_blank" class="link-button restricted-link" id="restricted-link" style="display: none;">
+                <i class="fas fa-lock"></i> Contenido Exclusivo para Fans (18+)
+            </a>
+            
+            <a href="https://www.twitch.tv/zilvyvt" target="_blank" class="link-button twitch">
+                <i class="fab fa-twitch"></i> Directos en Twitch
+            </a>
+
+            <a href="https://kick.com/zilvyvt" target="_blank" class="link-button kick-stream">
+                <i class="fab fa-kickstarter-k"></i> Directos en Kick
+            </a>
+
+            <a href="https://www.youtube.com/@ZilvyVT" target="_blank" class="link-button youtube">
+                <i class="fab fa-youtube"></i> Mi canal de YouTube
+            </a>
+            
+            <a href="https://www.tiktok.com/@zilvyvt" target="_blank" class="link-button tiktok">
+                <i class="fab fa-tiktok"></i> TikTok - Clips Rápidos
+            </a>
+
+            <a href="https://x.com/Ziilvy" target="_blank" class="link-button twitter">
+                <i class="fab fa-x-twitter"></i> Anuncios en X (Twitter)
+            </a>
+
+            <a href="https://discord.gg/zilverk" target="_blank" class="link-button discord">
+                <i class="fab fa-discord"></i> Únete a mi Discord
+            </a>
+        </div>
+        
+        <footer class="footer">
+            <p>Desing by Heflaruz | &copy; 2025</p>
+        </footer>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
