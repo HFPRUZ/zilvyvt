@@ -12,9 +12,7 @@ const gifs = [
     "images/zilvywalk.gif"
 ];
 
-let leftIndex = 0;
-let rightIndex = 1;
-let mobileIndex = 0;
+let gifIndex = 0;
 
 // Verificación de edad
 document.addEventListener('DOMContentLoaded', () => {
@@ -25,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
         loadContent(ageConfirmed === 'true');
     }
     changeGifs();
-    setInterval(changeGifs, 20000);
+    setInterval(changeGifs, 10000);
 });
 
 function verifyAge(isVerified) {
@@ -38,26 +36,15 @@ function loadContent(showAdultContent) {
     document.getElementById('main-content').style.display = 'block';
     const profileImage = document.getElementById('profile-pic');
     const restrictedLink = document.getElementById('restricted-link');
-    if (showAdultContent) {
-        profileImage.src = 'images/imagen-vtuber-adult.jpg';
-        restrictedLink.style.display = 'block';
-    } else {
-        profileImage.src = 'images/imagen-vtuber.jpg';
-        restrictedLink.style.display = 'none';
-    }
+    profileImage.src = showAdultContent ? 'images/imagen-vtuber-adult.jpg' : 'images/imagen-vtuber.jpg';
+    restrictedLink.style.display = showAdultContent ? 'block' : 'none';
 }
 
-// Cambiar GIFs
 function changeGifs() {
-    if (window.innerWidth > 768) {
-        // PC
-        document.getElementById("left-gif").src = gifs[leftIndex];
-        document.getElementById("right-gif").src = gifs[rightIndex];
-        leftIndex = (leftIndex + 2) % gifs.length;
-        rightIndex = (rightIndex + 2) % gifs.length;
-    } else {
-        // Móvil
-        document.body.style.backgroundImage = `url("${gifs[mobileIndex]}")`;
-        mobileIndex = (mobileIndex + 1) % gifs.length;
-    }
+    const linksContainer = document.querySelector('.links');
+    linksContainer.style.backgroundImage = `url("${gifs[gifIndex]}")`;
+    linksContainer.style.backgroundSize = 'cover';
+    linksContainer.style.backgroundPosition = 'center';
+    linksContainer.style.transition = 'background-image 0.5s ease-in-out';
+    gifIndex = (gifIndex + 1) % gifs.length;
 }
