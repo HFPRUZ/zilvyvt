@@ -41,7 +41,6 @@ body {
     font-size: 1.8em;
     font-weight: 700;
     color: var(--color-primary);
-    text-transform: uppercase;
     margin: 5px 0;
 }
 .vtuber-bio {
@@ -69,7 +68,7 @@ body {
     font-size: 1.1em;
     font-weight: 600;
     text-decoration: none;
-    background-color: #111; /* estilo más neutro */
+    background-color: #111111f8; /* estilo más neutro */
     color: var(--color-text);
     border: 2px solid var(--color-primary);
     box-shadow: 0 4px 10px rgba(0,0,0,0.4);
@@ -97,8 +96,27 @@ body {
 
 .link-button i {
     margin-right: 5%;
-    font-size: 1.2em; /* opcional: agrandar un poco */
+    font-size: 1.2em; 
 }
+
+.social-icons {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icons a {
+    color: var(--color-text);
+    font-size: 1.5em;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.social-icons a:hover {
+    color: var(--color-primary);
+    transform: scale(1.2);
+}
+
 
 .footer {
     margin-top: 40px;
