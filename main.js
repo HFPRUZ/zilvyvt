@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const url = parentLink.getAttribute("data-url");
 
       const shareData = {
-        title: "Mira este enlace",
+        title: "Comparte este enlace",
         url: url
       };
 

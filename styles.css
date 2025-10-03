@@ -23,12 +23,12 @@ transition: background-image 0.5s ease-in-out;
   position: relative;
   z-index: 1;
   width: 100%;
-  max-width: 500px;
+  max-width: 550px;
   text-align: center;
   margin: 0 auto;
-  background: rgba(17, 17, 17, 0.95); /* estilo tipo tarjeta */
-  border-radius: 25px; /* bordes redondeados estilo Linktree */
-  padding: 6% 20px 30px;  /* <-- más padding arriba */
+  background: rgba(15, 1, 19, 0.95); 
+  border-radius: 25px; 
+  padding: 75px 20px 30px;  
   box-shadow: 0 8px 25px rgba(0,0,0,0.6);
 }
 
@@ -83,7 +83,7 @@ gap: 20px;
 margin-top: 20px;
 padding: 20px;
 border-radius: 12px;
-background-color: #111; /* fallback */
+background-color: rgba(15, 1, 19, 0.95); 
 transition: background-image 0.5s ease-in-out;
 }
 
@@ -94,7 +94,8 @@ display: flex;
 align-items: center;
 justify-content: center;
 gap: 10px;
-padding: 18px 45px 18px 18px; /* espacio a la derecha para los tres puntos */
+width: 450px;
+padding: 18px 45px 18px 18px; 
 border-radius: 50px;
 font-size: 1.1em;
 font-weight: 600;
@@ -120,7 +121,7 @@ background-color: #7B2CBF;
 border-color: #9D4EDD;
 box-shadow: 0 4px 15px rgba(157, 78, 221, 0.6);
 color: #fff;
-padding: 18px 45px 18px 18px; /* igual que los demás */
+padding: 18px 45px 18px 18px; 
 }
 
 .link-button.restricted-link:hover {
@@ -159,7 +160,7 @@ transform: translateY(-50%) scale(1.2);
 }
 
 .link-button.restricted-link .share-link-btn:hover {
-color: var(--color-primary); /* rojo */
+color: var(--color-primary); 
 transform: translateY(-50%) scale(1.2);
 }
 
@@ -306,7 +307,7 @@ position: fixed;
 bottom: 20px;
 right: 20px;
 text-align: center;
-display: none; /* hidden by default, se muestra con JS */
+display: none; 
 z-index: 100;
 }
 
@@ -347,7 +348,6 @@ transform: scale(1.05);
 
 /* Ocultar en pantallas pequeñas (móvil) */
 @media (max-width: 768px) {
-.qr-container { display: none !important; }
 .side-gifs { display: none; }
 body { background-repeat:no-repeat; background-position:center center; background-size:contain; }
 }
