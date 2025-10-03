@@ -356,6 +356,10 @@ body { background-repeat:no-repeat; background-position:center center; backgroun
     max-width: 100%;
     padding: 16px 20px;
   }
+.link-button.restricted-link {
+  max-width: 100%;
+  padding: 16px 20px;
+}
 }
 
 /* Animaciones */
