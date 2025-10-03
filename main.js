@@ -1,6 +1,7 @@
 // Limpiar sesión de prueba
 sessionStorage.removeItem('isAgeVerified');
 
+
 // GIFs disponibles
 const gifs = [
     "images/zilvyvtdance.gif",
@@ -71,10 +72,12 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Compartir enlaces individuales
   document.querySelectorAll(".share-link-btn").forEach(btn => {
-    btn.addEventListener("click", async () => {
-      const url = btn.getAttribute("data-url");
+    btn.addEventListener("click", async (e) => {
+      e.preventDefault(); // evita abrir el link al hacer clic
+      const parentLink = btn.closest("a"); // busca el <a> más cercano
+      const url = parentLink.getAttribute("data-url");
+
       const shareData = {
         title: "Mira este enlace",
         url: url
@@ -89,6 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
 
 /* === Código añadido: generación y comportamiento del QR en PC === */
 (function setupSimpleQR(){
