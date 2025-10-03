@@ -25,6 +25,12 @@
     </div>
 
     <div class="container" id="main-content" style="display: none;">
+        <div class="top-bar">
+            <button id="share-page-btn" class="share-icon">
+                <i class="fas fa-share-alt"></i>
+             </button>
+        </div>
+
         <header class="profile-header">
             <img src="images/imagen-vtuber.jpg"  alt="Imagen de Perfil Regular de ZilvyVT"  class="profile-pic" id="profile-pic">
 
@@ -49,43 +55,60 @@
         </header>
 
         <div class="links">
-            <a href="https://fansly.com/ZilvyVT" target="_blank" class="link-button restricted-link" id="restricted-link" style="display: none;">
-                <i class="fas fa-lock"></i> Contenido Exclusivo para Fans (18+)
+            <a href="https://fansly.com/ZilvyVT" target="_blank" class="link-button restricted-link" id="restricted-link" data-url="https://fansly.com/ZilvyVT" style="display: none;">
+                <i class="fas fa-lock"></i> Contenido Exclusivo
+                <span class="share-link-btn"><i class="fas fa-ellipsis-v"></i></span>
             </a>
             
-            <a href="https://www.twitch.tv/zilvyvt" target="_blank" class="link-button twitch">
+            <a href="https://www.twitch.tv/zilvyvt" target="_blank" class="link-button twitch" data-url="https://www.twitch.tv/zilvyvt">
                 <i class="fab fa-twitch"></i> Directos en Twitch
+                <span class="share-link-btn"><i class="fas fa-ellipsis-v"></i></span>
             </a>
 
-            <a href="https://www.instagram.com/zilvychu/" target="_blank" class="link-button instagram">
+            <a href="https://www.instagram.com/zilvychu/" target="_blank" class="link-button instagram" data-url="https://www.instagram.com/zilvychu/">
                 <i class="fab fa-instagram"></i> Instagram de la minita
+                <span class="share-link-btn"><i class="fas fa-ellipsis-v"></i></span>
             </a>
 
-            <a href="https://kick.com/zilvyvt" target="_blank" class="link-button kick-stream">
+            <a href="https://kick.com/zilvyvt" target="_blank" class="link-button kick-stream" data-url="https://kick.com/zilvyvt">
                 <i class="fab fa-kickstarter-k"></i> Directos en Kick
+                <span class="share-link-btn"><i class="fas fa-ellipsis-v"></i></span>
             </a>
 
-            <a href="https://www.youtube.com/@ZilvyVT" target="_blank" class="link-button youtube">
+            <a href="https://www.youtube.com/@ZilvyVT" target="_blank" class="link-button youtube" data-url="https://www.youtube.com/@ZilvyVT">
                 <i class="fab fa-youtube"></i> Mi canal de YouTube
+                <span class="share-link-btn"><i class="fas fa-ellipsis-v"></i></span>
             </a>
             
-            <a href="https://www.tiktok.com/@zilvyvt" target="_blank" class="link-button tiktok">
+            <a href="https://www.tiktok.com/@zilvyvt" target="_blank" class="link-button tiktok" data-url="https://www.tiktok.com/@zilvyvt">
                 <i class="fab fa-tiktok"></i> TikTok - Clips Rápidos
+                <span class="share-link-btn"><i class="fas fa-ellipsis-v"></i></span>
             </a>
 
-            <a href="https://x.com/Ziilvy" target="_blank" class="link-button twitter">
+            <a href="https://x.com/Ziilvy" target="_blank" class="link-button twitter" data-url="https://x.com/Ziilvy">
                 <i class="fab fa-x-twitter"></i> Anuncios en X (Twitter)
+                <span class="share-link-btn"><i class="fas fa-ellipsis-v"></i></span>
             </a>
 
-            <a href="https://www.facebook.com/profile.php?id=61579304996112" target="_blank" class="link-button facebook">
+            <a href="https://www.facebook.com/profile.php?id=61579304996112" target="_blank" class="link-button facebook" data-url="https://www.facebook.com/profile.php?id=61579304996112">
                 <i class="fab fa-facebook"></i> Mi Facebook
+                <span class="share-link-btn"><i class="fas fa-ellipsis-v"></i></span>
             </a>
 
-            <a href="https://discord.gg/zilverk" target="_blank" class="link-button discord">
+            <a href="https://discord.gg/zilverk" target="_blank" class="link-button discord" data-url="https://discord.gg/zilverk">
                 <i class="fab fa-discord"></i> Únete a mi Discord
+                <span class="share-link-btn"><i class="fas fa-ellipsis-v"></i></span>
             </a>
         </div>
-        
+
+        <div id="qr-container" class="qr-container" aria-hidden="true"> 
+            <div class="qr-box" role="region" aria-label="Ver en móvil"> 
+                <div class="qr-text">View on mobile</div> 
+                <img alt="QR para abrir esta página en el móvil" id="qr-img" class="qr-img" src="" />
+            </div> 
+        </div>
+
+
         <footer class="footer">
             <p>Desing by Heflaruz | &copy; 2025</p>
         </footer>

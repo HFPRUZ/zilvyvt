@@ -48,3 +48,80 @@ function changeGifs() {
     linksContainer.style.transition = 'background-image 0.5s ease-in-out';
     gifIndex = (gifIndex + 1) % gifs.length;
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Botón para compartir la página completa
+  const sharePageBtn = document.getElementById("share-page-btn");
+  if (sharePageBtn) {
+    sharePageBtn.addEventListener("click", async () => {
+      const shareData = {
+        title: "Mis enlaces",
+        text: "Mira mis enlaces aquí ✨",
+        url: window.location.href
+      };
+
+      if (navigator.share) {
+        await navigator.share(shareData);
+      } else {
+        navigator.clipboard.writeText(window.location.href);
+        alert("🔗 Enlace de la página copiado");
+      }
+    });
+  }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Compartir enlaces individuales
+  document.querySelectorAll(".share-link-btn").forEach(btn => {
+    btn.addEventListener("click", async () => {
+      const url = btn.getAttribute("data-url");
+      const shareData = {
+        title: "Mira este enlace",
+        url: url
+      };
+
+      if (navigator.share) {
+        await navigator.share(shareData);
+      } else {
+        navigator.clipboard.writeText(url);
+        alert("🔗 Enlace copiado: " + url);
+      }
+    });
+  });
+});
+
+/* === Código añadido: generación y comportamiento del QR en PC === */
+(function setupSimpleQR(){
+const qrContainer = document.getElementById('qr-container');
+const qrImg = document.getElementById('qr-img');
+if (!qrContainer || !qrImg) return;
+
+function showQR() {
+const url = window.location.href;
+qrImg.src = 'https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=' + encodeURIComponent(url);
+qrContainer.style.display = 'block';
+qrContainer.setAttribute('aria-hidden', 'false');
+}
+
+function hideQR() {
+qrContainer.style.display = 'none';
+qrContainer.setAttribute('aria-hidden', 'true');
+}
+
+function checkScreen() {
+if (window.innerWidth > 768) {
+showQR();
+} else {
+hideQR();
+}
+}
+
+// inicial + on resize
+checkScreen();
+window.addEventListener('resize', checkScreen);
+
+// abrir link en desktop al hacer click
+qrImg.addEventListener('click', () => {
+window.open(window.location.href, '_blank');
+});
+})();
