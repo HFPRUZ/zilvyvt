@@ -1,127 +1,158 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZilvyVT - Redes y Enlaces</title>
-    <link rel="icon" type="image/png" href="images/3.png">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZilvyVT - Redes y Enlaces</title>
+  <link rel="icon" type="image/png" href="images/3.png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    
-    <div id="age-gate-modal" class="modal">
-        <div class="modal-content">
-            <h2 class="modal-title">Bienvenido</h2>
-                <p>Por favor, confirma tu edad</p>
-                <button class="modal-button accept-button" onclick="verifyAge(true)">
-                     <i class="fas fa-check-circle"></i> Soy mayor de 18
-                </button>
-                 <button class="modal-button decline-button" onclick="verifyAge(false)">
-                    <i class="fas fa-times-circle"></i> Prefiero no decirlo
-                </button>
-        </div>
+  
+  <div id="age-gate-modal" class="modal">
+    <div class="modal-content">
+      <h2 class="modal-title">Bienvenido</h2>
+      <p>Por favor, confirma tu edad</p>
+      <button class="modal-button accept-button" onclick="verifyAge(true)">
+        <i class="fas fa-check-circle"></i> Soy mayor de 18
+      </button>
+      <button class="modal-button decline-button" onclick="verifyAge(false)">
+        <i class="fas fa-times-circle"></i> Prefiero no decirlo
+      </button>
+    </div>
+  </div>
+
+  <div class="container" id="main-content" style="display: none;">
+    <div class="top-bar">
+      <button id="share-page-btn" class="share-icon">
+        <i class="fas fa-share-alt"></i>
+      </button>
     </div>
 
-    <div class="container" id="main-content" style="display: none;">
-        <div class="top-bar">
-            <button id="share-page-btn" class="share-icon">
-                <i class="fas fa-share-alt"></i>
-             </button>
-        </div>
+    <header class="profile-header">
+      <img src="images/imagen-vtuber.jpg" alt="Imagen de Perfil Regular de ZilvyVT" class="profile-pic" id="profile-pic">
 
-        <header class="profile-header">
-            <img src="images/imagen-vtuber.jpg"  alt="Imagen de Perfil Regular de ZilvyVT"  class="profile-pic" id="profile-pic">
+      <h1 class="vtuber-name">ZilvyVT</h1>
+      <p class="vtuber-bio">lvl 22 ✨Streamer Variedad ENG/ESP 💚💜 Zilverk Fem Version Alter Ego</p>
 
-            <h1 class="vtuber-name">ZilvyVT</h1>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/zilvychu/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@zilvyvt" target="_blank"><i class="fab fa-tiktok"></i></a>
+        <a href="https://www.youtube.com/@ZilvyVT" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://x.com/Ziilvy" target="_blank"><i class="fab fa-x-twitter"></i></a>
+      </div>
+    </header>
 
-            <p class="vtuber-bio">lvl 22 ✨Streamer Variedad ENG/ESP 💚💜 Zilverk Fem Version Alter Ego</p>
+    <div class="links">
+      <a href="https://fansly.com/ZilvyVT" target="_blank" class="link-button restricted-link" id="restricted-link" data-url="https://fansly.com/ZilvyVT" style="display: none;">
+        <i class="fas fa-lock"></i>
+        <span class="link-button-text">Contenido Exclusivo</span>
+        <span class="share-link-btn"><i class="fas fa-ellipsis-v"></i></span>
+      </a>
 
-            <div class="social-icons">
-                <a href="https://www.instagram.com/zilvychu/" target="_blank">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://www.tiktok.com/@zilvyvt" target="_blank">
-                    <i class="fab fa-tiktok"></i>
-                </a>
-                <a href="https://www.youtube.com/@ZilvyVT" target="_blank">
-                    <i class="fab fa-youtube"></i>
-                </a>
-                <a href="https://x.com/Ziilvy" target="_blank">
-                    <i class="fab fa-x-twitter"></i>
-                </a>
-            </div>
-        </header>
+      <a href="https://www.twitch.tv/zilvyvt" target="_blank" class="link-button twitch" data-url="https://www.twitch.tv/zilvyvt">
+        <i class="fab fa-twitch"></i>
+        <span class="link-button-text">Directos en Twitch</span>
+        <span class="share-link-btn"><i class="fas fa-ellipsis-v"></i></span>
+      </a>
 
-        <div class="links">
-            <a href="https://fansly.com/ZilvyVT" target="_blank" class="link-button restricted-link" id="restricted-link" data-url="https://fansly.com/ZilvyVT" style="display: none;">
-                <i class="fas fa-lock"></i>
-                <span class="link-button-text">Contenido Exclusivo</span>
-                <span class="share-link-btn"><i class="fas fa-ellipsis-v"></i></span>
-            </a>
-            
-            <a href="https://www.twitch.tv/zilvyvt" target="_blank" class="link-button twitch" data-url="https://www.twitch.tv/zilvyvt">
-                <i class="fab fa-twitch"></i>
-                <span class="link-button-text">Directos en Twitch</span>
-                <span class="share-link-btn"><i class="fas fa-ellipsis-v"></i></span>
-            </a>
+      <a href="https://www.instagram.com/zilvychu/" target="_blank" class="link-button instagram" data-url="https://www.instagram.com/zilvychu/">
+        <i class="fab fa-instagram"></i>
+        <span class="link-button-text">IG de la minita</span>
+        <span class="share-link-btn"><i class="fas fa-ellipsis-v"></i></span>
+      </a>
 
-            <a href="https://www.instagram.com/zilvychu/" target="_blank" class="link-button instagram" data-url="https://www.instagram.com/zilvychu/">
-                <i class="fab fa-instagram"></i>
-                <span class="link-button-text">IG de la minita</span>
-                <span class="share-link-btn"><i class="fas fa-ellipsis-v"></i></span>
-            </a>
+      <a href="https://kick.com/zilvyvt" target="_blank" class="link-button kick-stream" data-url="https://kick.com/zilvyvt">
+        <i class="fab fa-kickstarter-k"></i>
+        <span class="link-button-text">Directos en Kick</span>
+        <span class="share-link-btn"><i class="fas fa-ellipsis-v"></i></span>
+      </a>
 
-            <a href="https://kick.com/zilvyvt" target="_blank" class="link-button kick-stream" data-url="https://kick.com/zilvyvt">
-                <i class="fab fa-kickstarter-k"></i>
-                <span class="link-button-text">Directos en Kick</span>
-                <span class="share-link-btn"><i class="fas fa-ellipsis-v"></i></span>
-            </a>
+      <a href="https://www.youtube.com/@ZilvyVT" target="_blank" class="link-button youtube" data-url="https://www.youtube.com/@ZilvyVT">
+        <i class="fab fa-youtube"></i>
+        <span class="link-button-text">Canal de YouTube</span>
+        <span class="share-link-btn"><i class="fas fa-ellipsis-v"></i></span>
+      </a>
 
-            <a href="https://www.youtube.com/@ZilvyVT" target="_blank" class="link-button youtube" data-url="https://www.youtube.com/@ZilvyVT">
-                <i class="fab fa-youtube"></i>
-                <span class="link-button-text">Canal de YouTube</span>
-                <span class="share-link-btn"><i class="fas fa-ellipsis-v"></i></span>
-            </a>
-            
-            <a href="https://www.tiktok.com/@zilvyvt" target="_blank" class="link-button tiktok" data-url="https://www.tiktok.com/@zilvyvt">
-                <i class="fab fa-tiktok"></i>
-                <span class="link-button-text">Mi TikTok</span>
-                <span class="share-link-btn"><i class="fas fa-ellipsis-v"></i></span>
-            </a>
+      <a href="https://www.tiktok.com/@zilvyvt" target="_blank" class="link-button tiktok" data-url="https://www.tiktok.com/@zilvyvt">
+        <i class="fab fa-tiktok"></i>
+        <span class="link-button-text">Mi TikTok</span>
+        <span class="share-link-btn"><i class="fas fa-ellipsis-v"></i></span>
+      </a>
 
-            <a href="https://x.com/Ziilvy" target="_blank" class="link-button twitter" data-url="https://x.com/Ziilvy">
-                <i class="fab fa-x-twitter"></i>
-                <span class="link-button-text">(Twitter)/X</span>
-                <span class="share-link-btn"><i class="fas fa-ellipsis-v"></i></span>
-            </a>
+      <a href="https://x.com/Ziilvy" target="_blank" class="link-button twitter" data-url="https://x.com/Ziilvy">
+        <i class="fab fa-x-twitter"></i>
+        <span class="link-button-text">(Twitter)/X</span>
+        <span class="share-link-btn"><i class="fas fa-ellipsis-v"></i></span>
+      </a>
 
-            <a href="https://www.facebook.com/profile.php?id=61579304996112" target="_blank" class="link-button facebook" data-url="https://www.facebook.com/profile.php?id=61579304996112">
-                <i class="fab fa-facebook"></i>
-                <span class="link-button-text">Mi Facebook</span>
-                <span class="share-link-btn"><i class="fas fa-ellipsis-v"></i></span>
-            </a>
+      <a href="https://www.facebook.com/profile.php?id=61579304996112" target="_blank" class="link-button facebook" data-url="https://www.facebook.com/profile.php?id=61579304996112">
+        <i class="fab fa-facebook"></i>
+        <span class="link-button-text">Mi Facebook</span>
+        <span class="share-link-btn"><i class="fas fa-ellipsis-v"></i></span>
+      </a>
 
-            <a href="https://discord.gg/zilverk" target="_blank" class="link-button discord" data-url="https://discord.gg/zilverk">
-                <i class="fab fa-discord"></i>
-                <span class="link-button-text">Únete a mi Discord</span>
-                <span class="share-link-btn"><i class="fas fa-ellipsis-v"></i></span>
-            </a>
-        </div>
-
-        <div id="qr-container" class="qr-container" aria-hidden="true"> 
-            <div class="qr-box" role="region" aria-label="Ver en móvil"> 
-                <div class="qr-text">View on mobile</div> 
-                <img alt="QR para abrir esta página en el móvil" id="qr-img" class="qr-img" src="" />
-            </div> 
-        </div>
-        
-        <footer class="footer">
-            <p>Desing by Heflaruz | &copy; 2025</p>
-        </footer>
+      <a href="https://discord.gg/zilverk" target="_blank" class="link-button discord" data-url="https://discord.gg/zilverk">
+        <i class="fab fa-discord"></i>
+        <span class="link-button-text">Únete a mi Discord</span>
+        <span class="share-link-btn"><i class="fas fa-ellipsis-v"></i></span>
+      </a>
     </div>
 
-    <script src="main.js"></script>
+    <div id="qr-container" class="qr-container" aria-hidden="true"> 
+      <div class="qr-box" role="region" aria-label="Ver en móvil"> 
+        <div class="qr-text">View on mobile</div> 
+        <img alt="QR para abrir esta página en el móvil" id="qr-img" class="qr-img" src="" />
+      </div> 
+    </div>
+
+    <footer class="footer">
+      <p>Desing by Heflaruz | &copy; 2025</p>
+    </footer>
+  </div>
+
+  <!-- Modal de compartir estilo Linktree -->
+  <div id="share-modal" class="share-modal">
+    <div class="share-modal-content">
+      <div class="share-header">
+        <h3>Share me</h3>
+        <button class="share-close-btn"><i class="fas fa-times"></i></button>
+      </div>
+
+      <div class="share-preview" id="share-preview">
+        <img src="images/imagen-vtuber.jpg" alt="ZilvyVT" class="share-avatar">
+        <div class="share-info">
+          <h4 id="share-title">ZilvyVT</h4>
+          <p id="share-url-text">zilvyvt.com</p>
+        </div>
+      </div>
+
+      <div class="share-platforms-container" style="position: relative;">
+
+        <button class="carousel-btn carousel-btn-left">&#10094;</button>
+
+        <div class="share-platforms">
+            <button class="platform-btn" data-platform="x"><i class="fab fa-x-twitter"></i></button>
+            <button class="platform-btn" data-platform="facebook"><i class="fab fa-facebook"></i></button>
+            <button class="platform-btn" data-platform="whatsapp"><i class="fab fa-whatsapp"></i></button>
+            <button class="platform-btn" data-platform="linkedin"><i class="fab fa-linkedin"></i></button>
+            <button class="platform-btn" data-platform="messenger"><i class="fab fa-facebook-messenger"></i></button>
+            <button class="platform-btn" data-platform="snapchat"><i class="fab fa-snapchat-ghost"></i></button>
+            <button class="platform-btn" data-platform="email"><i class="fas fa-envelope"></i></button>
+        </div>
+
+        <button class="carousel-btn carousel-btn-right">&#10095;</button>
+      </div>
+
+      <div class="share-options">
+        <button class="share-option native-share"><i class="fas fa-share-alt"></i> Compartir con...</button>
+        <button class="share-option copy-link"><i class="fas fa-link"></i> Copiar enlace</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
 </body>
 </html>
