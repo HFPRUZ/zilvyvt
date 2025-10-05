@@ -70,7 +70,7 @@ if (sharePageBtn) {
     shareUrlText.textContent = window.location.hostname;
     shareModal.classList.add("active");
 
-    setTimeout(updateCarouselButtons, 50);
+    requestAnimationFrame(updateCarouselButtons);
   });
 }
 
@@ -85,7 +85,7 @@ document.querySelectorAll(".share-link-btn").forEach(btn => {
     shareUrlText.textContent = currentShareUrl;
     shareModal.classList.add("active");
 
-    setTimeout(updateCarouselButtons, 50);
+    requestAnimationFrame(updateCarouselButtons);
   });
 });
 
